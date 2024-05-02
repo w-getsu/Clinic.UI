@@ -1,0 +1,39 @@
+.logo-navbar {
+    background-image: url('images/LogoCinic.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .still p{
+    font-family: TT Norms;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 17.7px;
+    text-align: left;
+    
+}
+.stillraqam{
+    font-family: TT Norms;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 17.7px;
+    text-align: right;
+    color: red;
+    }
+    .qabul {
+        width: 180px;
+        height: 40px;
+        top: 26px;
+        left: 1710px;
+        gap: 0px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        border: 1px solid #EE1C1F
+    }
+    .navbar-elements {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .extra-elements {
+        padding-left: 40px;
+    }   
