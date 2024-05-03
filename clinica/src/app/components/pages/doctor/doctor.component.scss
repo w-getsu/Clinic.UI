@@ -16,3 +16,32 @@
 display: flex;
  
 }
+
+
+
+
+.qabul {
+    width: 310px;
+    height: 60px;
+    top: 26px;
+    left: 1710px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #EE1C1F;
+    margin: 60px auto;
+}
+
+.qabul:hover {
+    background-color: #92dbff; /* Hover ҳолда фон рангини ўзгартириш */
+    color: white; /* Шрифт рангини озгартириш */
+    opacity: 1;
+     /* Опаситини ошириш */
+}
+
+
+.say2{
+    
+    display: flex;
+     
+    }
