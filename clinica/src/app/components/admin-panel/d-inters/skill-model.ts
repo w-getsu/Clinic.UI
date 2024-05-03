@@ -1,4 +1,6 @@
 export interface SkillModel {
-    id:number,
-    name:string
+    id: string;
+    name: string;
+    doctors: any[]; // Recursive type to represent nested doctors
+    isDeleted: boolean;
 }
