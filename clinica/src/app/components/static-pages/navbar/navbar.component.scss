@@ -29,6 +29,15 @@
         opacity: 0px;
         border: 1px solid #EE1C1F
     }
+
+    .qabul:hover {
+        background-color: #92dbff; /* Hover ҳолда фон рангини ўзгартириш */
+        color: white; /* Шрифт рангини озгартириш */
+        opacity: 1;
+         /* Опаситини ошириш */
+    }
+
+    
     .navbar-elements {
         display: flex;
         justify-content: center;
