@@ -12,10 +12,10 @@ import { SpecialistsComponent } from './components/pages/specialists/specialists
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
-    {path: 'home',component:HomeComponent, canActivate:[clinicGuard, expireGuard]},
-    {path: 'doctor', component: DoctorComponent, canActivate:[clinicGuard, expireGuard]},
-    {path:'dashboard',component:DashboardComponent, canActivate: [clinicGuard,expireGuard,adminGuard]},
-    {path: 'specialists',component:SpecialistsComponent, canActivate: [clinicGuard,expireGuard]},
+    {path: 'home',component:HomeComponent},
+    {path: 'doctor', component: DoctorComponent},
+    {path:'dashboard',component:DashboardComponent},
+    {path: 'specialists',component:SpecialistsComponent},
     {path:'',component:HomeComponent},
     {path:'**',component:NotFoundComponent}
 ];
