@@ -1,3 +1,5 @@
+<app-dashboard></app-dashboard>
+
 <button class="btn btn-primary">Add</button>
 <br />
 <table class="table">
@@ -8,9 +10,13 @@
     </tr>
   </thead>
   <tbody>
+    @for (item of skills; track $index) {
+
     <tr>
-      <th>1</th>
-      <td>Mark</td>
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td><button (click)="Delete(item.id)" class="btn btn-danger">Delete</button></td>
     </tr>
+    }
   </tbody>
 </table>
