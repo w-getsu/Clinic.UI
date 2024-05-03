@@ -7,13 +7,15 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { adminGuard,clinicGuard,expireGuard } from './guards/clinic.guard';
 import { DashboardComponent } from './components/admin-panel/dashboard/dashboard.component';
+import { SpecialistsComponent } from './components/pages/specialists/specialists.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
     {path: 'home',component:HomeComponent, canActivate:[clinicGuard, expireGuard]},
     {path: 'doctor', component: DoctorComponent, canActivate:[clinicGuard, expireGuard]},
-    {path:'dashboard',component:DashboardComponent, canActivate: [clinicGuard,clinicGuard,adminGuard]},
-    {path:  '',component:HomeComponent},
+    {path:'dashboard',component:DashboardComponent, canActivate: [clinicGuard,expireGuard,adminGuard]},
+    {path: 'specialists',component:SpecialistsComponent, canActivate: [clinicGuard,expireGuard]},
+    {path:'',component:HomeComponent},
     {path:'**',component:NotFoundComponent}
 ];
