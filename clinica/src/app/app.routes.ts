@@ -8,8 +8,8 @@ import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { SpecialistsComponent } from './components/pages/specialists/specialists.component';
 
 export const routes: Routes = [
-    // {path : 'login', component : LoginComponent},
-    // {path: 'register', component : RegisterComponent},
+    {path : 'login', component : LoginComponent},
+    {path: 'register', component : RegisterComponent},
     {path: 'home',component:HomeComponent},
     {path: 'doctor', component: DoctorComponent},
     {path:  '',component:HomeComponent},
