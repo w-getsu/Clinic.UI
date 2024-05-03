@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     padding: 0;
@@ -14,16 +14,25 @@
     margin: 0 auto;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// ------------------------------------------ home1----------------------------
+
 .home1-img {
- display: flex;
- align-items:center;
- padding-right: 550px; 
+    display: flex;
+    align-items: center;
+    padding-right: 550px;
 
 }
+
 .home-img-right {
     position: absolute;
     left: 50%;
+    z-index: 1;
 }
+
 .home1-img-1 {
     display: flex;
     align-items: center;
@@ -108,4 +117,70 @@
     opacity: 0px;
     background: #F4F4F4;
     ;
+}
+
+//----------------------------------------home2-------------------------------------------------------
+
+.home2 {
+    margin-top: -600px;
+}
+
+.home2-img img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    // height: 980px;
+    z-index: 2;
+}
+
+.home2-text {
+    position: absolute;
+    z-index: 3;
+    margin-left: -50px;
+}
+
+.home2-text-katta {
+    font-family: Roboto, Condensed;
+    position: relative;
+    top: 60px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    font-size: 32px;
+    font-weight: lighter;
+    line-height: 70px;
+    margin-top: 200px;
+    // margin-left: 20px;
+    // opacity: 80%;
+    color: #000000;
+}
+
+.home2-text-kichkina {
+    font-family: Roboto, Condensed;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 28.32px;
+    text-align: right;
+    margin: 80px 123px;
+}
+
+.home2-box {
+    position: relative;
+    border: 1px solid hidden;
+    // background-color: #ffffff;
+    z-index: 4;
+    width: 650px;
+    height: 700px;
+    top: 900px;
+    left: 170px;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(231, 166, 26, 1);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(231, 166, 26, 1);
+    box-shadow: inset 0px 0px 0px 1px rgba(231, 166, 26, 1);
+}
+
+//--------------------------------home3----------------------------
+.home3 {
+    margin-top: 1000px;
 }
