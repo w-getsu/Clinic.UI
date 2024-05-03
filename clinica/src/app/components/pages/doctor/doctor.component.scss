@@ -1,7 +1,7 @@
 .Name{
 
     font-size: 44px;
-    margin-top: 171px;
+    margin-top: 51px;
     margin-left: 184px;
     
 }
@@ -44,4 +44,22 @@ display: flex;
     
     display: flex;
      
-    }
+}
+
+.zadatvapros {
+    width: 310px;
+    height: 60px;
+    top: -5px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #0f0c0c;
+    
+}
+
+.zadatvapros:hover {
+    background-color: #92dbff; /* Hover ҳолда фон рангини ўзгартириш */
+    color: white; /* Шрифт рангини озгартириш */
+    opacity: 1;
+     /* Опаситини ошириш */
+}
