@@ -21,6 +21,7 @@ export class AuthServiceService {
   register(data:registerModel) : Observable<responseModel>{
     return this.http.post<responseModel>(`${this.apiUrl}Auth/Register`, data).pipe(
       map((response)=>{
+        console.log(response)
         if(response.isSuccess == true){
           console.log("Registered");
         }

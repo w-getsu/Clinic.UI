@@ -27,7 +27,8 @@ export class LoginComponent {
 
           this.decodedToken = jwtDecode(localStorage.getItem(this.tokenKey)!)
           if(this.decodedToken.role == 'Admin'){
-            console.log('admin-test');
+            this.router.navigateByUrl('/home')
+            console.log('salom');
             console.log(this.decodedToken.role);
           }
           else if(this.decodedToken.role == 'User'){
@@ -35,12 +36,12 @@ export class LoginComponent {
             console.log(this.decodedToken.role);
           }
           }, error: (err) => {
-        alert(err.error.message)
-
+            alert(err.error.message)
           }
         });       
       }
       ngOnInit(): void {
+        console.log("salom")
         this.form = this.fb.group({
           email: ['', [Validators.required, Validators.email]],
           password: ['', Validators.required],
