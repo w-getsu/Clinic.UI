@@ -24,7 +24,7 @@ export class SkillService {
     return this.http.get<SkillModel>(`${this.apiurl}/GetSkillById/?Id=${data.id}`);
   }
   delByid(id:string) : Observable<responseModel>{
-    return this.http.delete<responseModel>(`${this.apiurl}/DeleteSkill/` + id).pipe(
+    return this.http.delete<responseModel>(`${this.apiurl}/DeleteSkill/?id=${id}`).pipe(
       map((response)=>{
         if(response.isSuccess){
           alert("Deleted");
@@ -44,7 +44,7 @@ export class SkillService {
   }
 
   create(data:SkillPostModel) : Observable<responseModel>{
-    return this.http.post<responseModel>(this.apiurl, data).pipe(
+    return this.http.post<responseModel>(`${this.apiurl}/CreateSkills`, data).pipe(
       map((response)=>{
         if(response.isSuccess){
           alert("Created");

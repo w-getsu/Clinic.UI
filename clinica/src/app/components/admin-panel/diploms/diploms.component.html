@@ -1,1 +1,18 @@
-<p>diploms works!</p>
+<p-button icon="pi pi-plus"></p-button>
+
+<p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Litsenzya</th>
+            <th>DoctorId</th>
+            <th>PicturePath</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.litsenzyaId }}</td>
+            <td>{{ product.doctorId }}</td>
+            <td>{{ product.picturePath }}</td>
+        </tr>
+    </ng-template>
+</p-table>

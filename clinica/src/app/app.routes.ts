@@ -17,6 +17,8 @@ import { ContactsComponent } from './components/pages/contacts/contacts.componen
 import { AboutComponent } from './components/pages/about/about.component';
 import { UpdateComponent } from './components/admin-panel/skills/update/update.component';
 import { HomeDashComponent } from './components/admin-panel/home-dash/home-dash.component';
+import { CreateComponent } from './components/admin-panel/skills/create/create.component';
+import { DiplomsComponent } from './components/admin-panel/diploms/diploms.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
@@ -35,8 +37,10 @@ export const routes: Routes = [
             {path: 'skills', component:SkillsComponent},
             {path: 'dashhome', component:HomeDashComponent},
             {path : 'skills', children:[
-                {path: 'update',component: UpdateComponent}
-            ]}
+                {path: 'update',component: UpdateComponent},
+                {path: 'create',component: CreateComponent}
+            ]},
+            {path:'diplom',component:DiplomsComponent}
         ]},
     {path: 'specialists',component:SpecialistsComponent},
     {path:'',component:HomeComponent},
