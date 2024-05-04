@@ -18,6 +18,7 @@ import { UpdateComponent } from './components/admin-panel/skills/update/update.c
 import { HomeDashComponent } from './components/admin-panel/home-dash/home-dash.component';
 import { CreateComponent } from './components/admin-panel/skills/create/create.component';
 import { DiplomsComponent } from './components/admin-panel/diploms/diploms.component';
+import { ContactsComponent } from './components/pages/contacts/contacts.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
