@@ -218,3 +218,32 @@ body {
 .extra-elements {
     padding-left: 40px;
 }   
+.raqam li {
+    display: flex;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.home4-box {
+    display: flex;
+    position: relative;
+    top: 350px;
+    left: -120px;
+    width: 40px;
+    height: 40px;
+    -webkit-box-shadow: 0px 0px 0px 1px rgb(231, 64, 26);
+    -moz-box-shadow: 0px 0px 0px 1px rgb(231, 64, 26);
+    box-shadow: 0px 0px 0px 1px rgb(231, 64, 26);
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
