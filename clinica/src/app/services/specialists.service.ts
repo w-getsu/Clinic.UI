@@ -15,4 +15,8 @@ export class SpecialistsService {
   getAllDoctors(pageIndex: number, size: number): Observable<Specialists[]> {
     return this.httpClient.get<Specialists[]>(this.apiUrl + `Doctor/GetAllDoctor?pageIndex=${pageIndex}&size=${size}`)
   }
+
+  getPictureByPath(path:string):Observable<any>{
+    return this.httpClient.get<any>(this.apiUrl+`SendPicture?path=${path}`)
+  }
 }

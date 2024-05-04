@@ -46,5 +46,10 @@ export class SkillsComponent {
       this.router.navigateByUrl('/dashboard/skills/update');
     }
 
+    Create()
+    {
+      console.log('contr')
+      this.router.navigateByUrl('/dashboard/skills/create')
+    }
   
 }
