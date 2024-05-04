@@ -31,7 +31,7 @@
   </div>
 
   <div class="card-div"><!--Cards-->
-    <div>
+    <div class="above-cards">
       <app-card 
       [country]="'Россия'"
       [fullname]="'Наталья Николаевна Гронская'"
@@ -40,6 +40,11 @@
       [startWork]="'Стаж работы c 2004 год'"
       [description]="'Врач-диетолог, гастроэнтеролог, врач антивозрастной медицины.'"
       />
+      <app-duration-time 
+      [beforeTime]="'до'"
+      [time]="'40-60'"
+      [timeDescription]="'минут'"
+      [mainDescription]="'Время\nпроцедуры'"/>
     </div>
     <div>
 
