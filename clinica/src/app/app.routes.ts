@@ -19,6 +19,7 @@ import { HomeDashComponent } from './components/admin-panel/home-dash/home-dash.
 import { CreateComponent } from './components/admin-panel/skills/create/create.component';
 import { DiplomsComponent } from './components/admin-panel/diploms/diploms.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
+import { ServiceComponent } from './components/pages/service/service.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
