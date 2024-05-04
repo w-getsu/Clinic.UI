@@ -5,6 +5,8 @@ import { SkillModel } from '../../d-inters/skill-model';
 import { map, Observable } from 'rxjs';
 import { getModel } from '../../d-inters/get-model';
 import { responseModel } from '../../../../interfaces/responce';
+import { SkillPostModel } from '../../d-inters/create-model';
+import { SkillUpdateModel } from '../../d-inters/update-model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +24,26 @@ export class SkillService {
       map((response)=>{
         if(response.isSuccess){
           alert("Deleted");
+        }
+        return response;
+      }));
+  }
+
+  update(data:SkillUpdateModel) : Observable<responseModel>{
+    return this.http.put<responseModel>(this.apiurl, data).pipe(
+      map((response)=>{
+        if(response.isSuccess){
+          alert("Updated");
+        }
+        return response;
+      }));
+  }
+
+  create(data:SkillPostModel) : Observable<responseModel>{
+    return this.http.post<responseModel>(this.apiurl, data).pipe(
+      map((response)=>{
+        if(response.isSuccess){
+          alert("Created");
         }
         return response;
       }));
