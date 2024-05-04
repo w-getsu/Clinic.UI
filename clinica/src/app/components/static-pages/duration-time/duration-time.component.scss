@@ -1,0 +1,44 @@
+.beforeTime{
+    font-size: 36px;
+    font-weight: 700;
+    padding-top: 60px;
+    padding-right: 20px;
+    color: red;
+}
+
+.time{
+    font-size: 96px;
+    font-weight: 700;
+    color: red;
+}
+
+.timeDescription{
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    color: red;
+}
+
+.mainDescription{
+    font-size: 36px;
+    font-weight: 300;
+    position: relative;
+    right: 150px;
+    color: gray;
+}
+
+.rectangle{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right:230px;
+    border: 1px solid red;
+}
+
+.duration-time{
+    display: flex;
+}
+
+.mainDescription-div{
+    width: 100px;
+}
