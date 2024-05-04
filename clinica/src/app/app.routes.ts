@@ -8,6 +8,7 @@ import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { adminGuard,clinicGuard,expireGuard } from './guards/clinic.guard';
 import { DashboardComponent } from './components/admin-panel/dashboard/dashboard.component';
 import { SpecialistsComponent } from './components/pages/specialists/specialists.component';
+import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { SkillsComponent } from './components/admin-panel/skills/skills.component';
 import { ServiceComponent } from './components/pages/service/service.component';
 import { ServicesComponent } from './components/pages/services/services.component';
