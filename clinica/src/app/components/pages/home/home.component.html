@@ -7,7 +7,8 @@
                 <div class="home-img-left">
                     <div class="home1-img-1">
                         <img src="../../../../assets/logo2_2.svg" alt="">
-                        <h1 style="margin-left: 30px;" class="home1-img-1-text">Европейский стандарт<br>антивозрастной
+                        <h1 style="margin-left: 30px;" class="home1-img-1-text">
+                            Европейский стандарт<br>антивозрастной
                             эстетической медицины
                         </h1>
                     </div>
@@ -112,23 +113,26 @@
                             text-align: left;
                             align-items: center;
                             ">
-                   <span style="font-family: Roboto,Condensed;
+                    <span style="font-family: Roboto,Condensed;
                    font-size: 130px;
                    font-weight: 300;">молодость</span><br>
                     внутри и снаружи</span><br>
-                    <span style="font-family: TT, Norms;
+                <span style="font-family: TT, Norms;
                     font-size: 24px;
                     font-weight: 300;
                     line-height: 31.2px;
                     text-align: left;
                     opacity: 60%;
-                    ">Клиника антивозрастной регенеративной и эстетической медицины под 
-                       <br> управлением холдинга <span style="color: red;">A Swiss Group AG, Швейцария</span></span>
+                    ">Клиника антивозрастной регенеративной и эстетической медицины под
+                    <br> управлением холдинга <span style="color: red;">A Swiss Group AG, Швейцария</span></span>
             </p>
             <div>
                 <li class="extra-elements">
-                    <button class="qabul"><a href="" style="color: #EE1C1F; text-decoration: none; font-size: 20px;">Записаться на консультацию </a></button>
-                  </li>
+                    <button class="qabul"><a href=""
+                            style="color: #EE1C1F; text-decoration: none; font-size: 20px;">Записаться на консультацию
+                        </a></button>
+                </li>
+
                 <li><a href="#" style="font-family: TT,Norms;
                                         text-decoration: none;
                                         position: relative;
@@ -139,24 +143,60 @@
                                         top: -22px;
                                         left: 360px;
                                         color: rgb(83, 82, 82);
-                    ">Подробнее о клинике</a></li>
-                    <li><app-duration-time 
-                        [beforeTime]="'до'"
-                        [time]="'40-60'"
-                        [timeDescription]="'минут'"
-                        [mainDescription]="'Время\nпроцедуры'"/>
-                        <app-duration-time 
-                        [beforeTime]="'до'"
-                        [time]="'40-60'"
-                        [timeDescription]="'минут'"
-                        [mainDescription]="'Время\nпроцедуры'"/>
-
-                  </li>
+                                        ">Подробнее о клинике</a></li>
+                <div class="raqam">
+                    <li><app-duration-time [time]="'7'" [mainDescription]="'международных организаций-партнеров'" />
+                        <app-duration-time [time]="'10'"
+                            [mainDescription]="'специалистов из 4 стран ведут прием в Москве'" />
+                    </li>
+                    <li>
+                        <app-duration-time [beforeTime]="''" [time]="'7'" [timeDescription]="''"
+                            [mainDescription]="'направлений антивозрастной медицины'" />
+                        <app-duration-time [beforeTime]="'до'" [time]="'40-60'" [timeDescription]="'минут'"
+                            [mainDescription]="'лет работы в России'" />
+                    </li>
+                </div>
             </div>
         </div>
     </section>
-    <section class="home4">
-        
+    <section class="home4" style="display: flex;align-items: start;">
+        <div class="home4-left">
+            <ul>
+                <li style="font-family: Roboto,Condensed;
+                            font-size: 44px;
+                            font-weight: 200;
+                            line-height: 51.56px;
+                            text-align: left;
+                            padding-bottom: 50px;
+                            padding-left: 50px;">
+                    Специалисты <br> клиники
+                </li>
+                <li style="
+                display: flex;
+                flex-wrap: wrap; 
+                font-family: TT,Norms;
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 21.24px;
+                text-align: left;
+                padding-left:50px ;
+                opacity: 60%;">
+                    Врач станет медицинским партнером и куратором на долгие <br> годы. <br><br>
+                    Он поможет вам и вашей семье <br> вовремя пройти обследования,<br> скорректировать привычки.</li>
+                </ul>
+        </div>
+        <ul class="list">
+            <li class="home4-box" style="opacity: 30%;"><a href="#"><img src="../../../../assets/images/prew.svg" alt=""></a></li>
+            <li class="home4-box"><a href="#"><img src="../../../../assets/images/next.svg"alt=""></a></li>
+        </ul>
+        <div class="cards">
+            @for (doctor of Doctors; track doctor.id) {
+            <app-card [picturePath]="doctor.picturePath" [country]="doctor.address" [fullname]="doctor.name"
+                [skill]="doctor.specialist.name" [specialst]="doctor.serviceType.name"
+                [startWork]="'Стаж работы с '+doctor.startWork+' год'" [description]="''" />
+            }
+        </div>
     </section>
 </main>
+
 <app-footer></app-footer>
