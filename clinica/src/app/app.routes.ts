@@ -9,15 +9,37 @@ import { adminGuard,clinicGuard,expireGuard } from './guards/clinic.guard';
 import { DashboardComponent } from './components/admin-panel/dashboard/dashboard.component';
 import { SpecialistsComponent } from './components/pages/specialists/specialists.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
+import { SkillsComponent } from './components/admin-panel/skills/skills.component';
+import { ServiceComponent } from './components/pages/service/service.component';
+import { ServicesComponent } from './components/pages/services/services.component';
+import { PricingComponent } from './components/pages/pricing/pricing.component';
+import { FeedbackComponent } from './components/pages/feedback/feedback.component';
+import { ContactsComponent } from './components/pages/contacts/contacts.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { UpdateComponent } from './components/admin-panel/skills/update/update.component';
+import { HomeDashComponent } from './components/admin-panel/home-dash/home-dash.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
-    {path: 'home',component:HomeComponent, canActivate:[clinicGuard, expireGuard]},
-    {path: 'doctor', component: DoctorComponent, canActivate:[clinicGuard, expireGuard]},
-    {path:'contacts', component:ContactsComponent},
-    {path:'dashboard',component:DashboardComponent, canActivate: [clinicGuard,expireGuard,adminGuard]},
-    {path: 'specialists',component:SpecialistsComponent, canActivate: [clinicGuard,expireGuard]},
+    {path: 'home',component:HomeComponent},
+    {path: 'doctor', component: DoctorComponent},
+    {path: 'dashboard',component: HomeDashComponent},
+    {path: 'service', component:ServiceComponent},
+    {path: 'services',component:ServicesComponent},
+    {path:'pricing',component:PricingComponent},
+    {path:'feedback',component:FeedbackComponent},
+    {path:'contact',component:ContactsComponent},
+    {path:'about',component:AboutComponent},
+    {path: 'dashboard',
+        children: [
+            {path: 'skills', component:SkillsComponent},
+            {path: 'dashhome', component:HomeDashComponent},
+            {path : 'skills', children:[
+                {path: 'update',component: UpdateComponent}
+            ]}
+        ]},
+    {path: 'specialists',component:SpecialistsComponent},
     {path:'',component:HomeComponent},
     {path:'**',component:NotFoundComponent}
 ];
