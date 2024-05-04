@@ -1,44 +1,6 @@
 <header class="app-header">
-    <div class="app-header-logo">
-    </div>
-    <div class="app-header-navigation">
-        <div class="tabs">
-            <a routerLink="/dashboard/doctors">
-            Doctors
-            </a>
-            <a routerLink="/dashboard/specialists">
-                Specialists
-            </a>
-            <a routerLink="/dashboard/servicetypes">
-                ServiceTypes
-            </a>
-            <a routerLink="/dashboard/results">
-                Results
-            </a>
-            <a routerLink="/dashboard/diploms">
-                Diploms
-            </a>
-            <a routerLink="/dashboard/skills">
-                Skills
-            </a>
-            <a routerLink="/dashboard/news">
-                News
-            </a>
-            <a routerLink="/dashboard/feedbacks">
-                Feedbacks
-            </a>
-            <a routerLink="/dashboard/educations">
-                Educations
-            </a>
-            <a routerLink="/dashboard/users">
-                Users
-            </a>
-        </div>
-    </div>
-    <div class="app-header-mobile">
-        <button class="icon-button large">
-            <i class="ph-list"></i>
-        </button>
+    <div class="card">
+        <p-tabMenu [model]="items" />
     </div>
 
 </header>

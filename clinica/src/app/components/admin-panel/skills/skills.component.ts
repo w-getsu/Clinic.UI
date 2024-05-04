@@ -3,6 +3,7 @@ import { SkillModel } from '../d-inters/skill-model';
 import { SkillService } from '../d-services/skillService/skill.service';
 import { getModel } from '../d-inters/get-model';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
@@ -19,7 +20,7 @@ export class SkillsComponent {
     size: 10
   }
 
-  constructor(private servise : SkillService){}
+  constructor(private servise : SkillService,private router: Router){}
   ngOnInit(): void {
     this.getAllProducts();
   }
@@ -39,6 +40,10 @@ export class SkillsComponent {
       this.servise.delByid(id).subscribe(result =>
         console.log(result)
         )
+    }
+    Update(){
+      console.log("contr")
+      this.router.navigateByUrl('/dashboard/skills/update');
     }
 
   

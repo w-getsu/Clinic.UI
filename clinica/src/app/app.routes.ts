@@ -15,23 +15,28 @@ import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { FeedbackComponent } from './components/pages/feedback/feedback.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { AboutComponent } from './components/pages/about/about.component';
+import { UpdateComponent } from './components/admin-panel/skills/update/update.component';
+import { HomeDashComponent } from './components/admin-panel/home-dash/home-dash.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
     {path: 'home',component:HomeComponent},
     {path: 'doctor', component: DoctorComponent},
-    {path: 'dashboard',component: DashboardComponent},
+    {path: 'dashboard',component: HomeDashComponent},
     {path: 'service', component:ServiceComponent},
     {path: 'services',component:ServicesComponent},
     {path:'pricing',component:PricingComponent},
     {path:'feedback',component:FeedbackComponent},
     {path:'contact',component:ContactsComponent},
     {path:'about',component:AboutComponent},
-
     {path: 'dashboard',
         children: [
-            {path: 'skills', component:SkillsComponent}
+            {path: 'skills', component:SkillsComponent},
+            {path: 'dashhome', component:HomeDashComponent},
+            {path : 'skills', children:[
+                {path: 'update',component: UpdateComponent}
+            ]}
         ]},
     {path: 'specialists',component:SpecialistsComponent},
     {path:'',component:HomeComponent},
