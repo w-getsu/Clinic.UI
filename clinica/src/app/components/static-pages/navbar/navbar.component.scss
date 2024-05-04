@@ -36,7 +36,10 @@
         opacity: 1;
          /* Опаситини ошириш */
     }
-
+    .extra-elements {
+        padding-left: 40px;
+    }   
+    
     
     .navbar-elements {
         display: flex;
@@ -44,6 +47,3 @@
         align-items: center;
         width: 100%;
     }
-    .extra-elements {
-        padding-left: 40px;
-    }   
