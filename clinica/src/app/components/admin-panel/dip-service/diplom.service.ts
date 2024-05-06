@@ -19,17 +19,12 @@ export class DiplomService {
   getAll(data: getModel): Observable<Diplom[]> {
     return this.http.get<Diplom[]>(`${this.apiUrl}/GetAllDiplom?pageIndex=${data.pageIndex}&size=${data.size}`)
   }
-      
-      
-    
-  
-  
 
   getById(data:IndexerModel): Observable<Diplom> {
     return this.http.get<Diplom>(`${this.apiUrl}/GetDiplomById/?Id=${data.id}`);
   }
 
-  delByid(id:IndexerModel) : Observable<responseModel>{
+  delByid(id:string) : Observable<responseModel>{
     return this.http.delete<responseModel>(`${this.apiUrl}/DeleteDiplom?id=${id}`).pipe(
       map((response)=>{
         if(response.isSuccess){
@@ -40,7 +35,7 @@ export class DiplomService {
   }
 
   update(data:UpdateDiplom) : Observable<responseModel>{
-    return this.http.put<responseModel>(`${this.apiUrl}/UpdateSkill`, data).pipe(
+    return this.http.put<responseModel>(`${this.apiUrl}/UpdateDiplom`, data).pipe(
       map((response)=>{
         if(response.isSuccess){
           alert("Updated");

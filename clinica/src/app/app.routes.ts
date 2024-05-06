@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './components/identity-component/login/login.component';
 import { RegisterComponent } from './components/identity-component/register/register.component';
 import { HomeComponent } from './components/pages/home/home.component';
-
+import { CreateComponentA } from './components/admin-panel/diploms/create/create.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { adminGuard,clinicGuard,expireGuard } from './guards/clinic.guard';
@@ -20,18 +20,22 @@ import { CreateComponent } from './components/admin-panel/skills/create/create.c
 import { DiplomsComponent } from './components/admin-panel/diploms/diploms.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { ServiceComponent } from './components/pages/service/service.component';
+import { PressCenterComponent } from './components/pages/press-center/press-center.component';
+import { ProgrammsComponent } from './components/pages/programms/programms.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
+
     {path: 'home',component:HomeComponent},
     {path: 'doctor', component: DoctorComponent},
+    {path: 'program', component: ProgrammsComponent},
     {path: 'dashboard',component: HomeDashComponent},
     {path: 'service', component:ServiceComponent},
     {path: 'services',component:ServicesComponent},
     {path:'pricing',component:PricingComponent},
     {path:'feedback',component:FeedbackComponent},
-    {path:'contact',component:ContactsComponent},
+    {path:'contact',component:ContactsComponent,canActivate:[clinicGuard,expireGuard]},
     {path:'about',component:AboutComponent},
     {path: 'dashboard',
         children: [
@@ -41,9 +45,13 @@ export const routes: Routes = [
                 {path: 'update',component: UpdateComponent},
                 {path: 'create',component: CreateComponent}
             ]},
-            {path:'diplom',component:DiplomsComponent}
+            {path:'diplom',component:DiplomsComponent},
+            {path:'diplom',children:[
+                {path: 'create',component:CreateComponentA}
+            ]}
         ]},
-    {path: 'specialists',component:SpecialistsComponent},
-    {path:'',component:HomeComponent},
+    {path: 'specialists',component:SpecialistsComponent,canActivate:[clinicGuard,expireGuard]},
+    {path:"press-center",component:PressCenterComponent},
+    {path:'',component:HomeComponent,canActivate:[clinicGuard,expireGuard]},
     {path:'**',component:NotFoundComponent}
 ];
