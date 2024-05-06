@@ -5,11 +5,12 @@ import { DurationTimeComponent } from '../../static-pages/duration-time/duration
 import { Specialists } from '../../../interfaces/specialists';
 import { SpecialistsService } from '../../../services/specialists.service';
 import { CardComponent } from '../../static-pages/card/card.component';
+import { MiniSidebarComponent } from '../../static-pages/mini-sidebar/mini-sidebar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent,FooterComponent,DurationTimeComponent,CardComponent],
+  imports: [NavbarComponent,FooterComponent,DurationTimeComponent,CardComponent,MiniSidebarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
