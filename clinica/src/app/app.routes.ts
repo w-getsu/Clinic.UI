@@ -55,5 +55,6 @@ export const routes: Routes = [
     {path: 'specialists',component:SpecialistsComponent,canActivate:[clinicGuard,expireGuard]},
     {path:"press-center",component:PressCenterComponent},
     {path:'',component:HomeComponent,canActivate:[clinicGuard,expireGuard]},
+    {path:'not-found',component:NotFoundComponent},
     {path:'**',component:NotFoundComponent}
 ];
