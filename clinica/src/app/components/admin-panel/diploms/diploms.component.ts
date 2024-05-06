@@ -28,13 +28,14 @@ export class DiplomsComponent implements OnInit {
       this.products = data;
     });
   }
-  model : IndexerModel =
-  {
-    id : ''
-  }
   del(id:string)
   {
-    this.model.id == id
-    this.productService.delByid(this.model);
+    this.productService.delByid(id).subscribe((data)=>{
+      if(data.isSuccess == true)
+      {
+          alert("Deleted")
+      }
+      alert("Not successfully")
+      }
+    )};
   }
-}

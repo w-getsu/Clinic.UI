@@ -16,7 +16,7 @@ export class CreateComponentA {
   createModel : CreateDiplom =  {
     litsenzyaId: '',
     doctorId:'',
-    picturePath:null
+    picturePath:''
   }
 
   handleFileInput(event: any) {
