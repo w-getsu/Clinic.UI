@@ -20,11 +20,12 @@ import { CreateComponent } from './components/admin-panel/skills/create/create.c
 import { DiplomsComponent } from './components/admin-panel/diploms/diploms.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { ServiceComponent } from './components/pages/service/service.component';
-import { ProgrammsComponent } from './components/pages/programms/programms.component';
+import { PressCenterComponent } from './components/pages/press-center/press-center.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
+
     {path: 'home',component:HomeComponent},
     {path: 'doctor', component: DoctorComponent},
     {path: 'program', component: ProgrammsComponent},
@@ -33,7 +34,7 @@ export const routes: Routes = [
     {path: 'services',component:ServicesComponent},
     {path:'pricing',component:PricingComponent},
     {path:'feedback',component:FeedbackComponent},
-    {path:'contact',component:ContactsComponent},
+    {path:'contact',component:ContactsComponent,canActivate:[clinicGuard,expireGuard]},
     {path:'about',component:AboutComponent},
     {path: 'dashboard',
         children: [
@@ -48,7 +49,8 @@ export const routes: Routes = [
                 {path: 'create',component:CreateComponentA}
             ]}
         ]},
-    {path: 'specialists',component:SpecialistsComponent},
-    {path:'',component:HomeComponent},
+    {path: 'specialists',component:SpecialistsComponent,canActivate:[clinicGuard,expireGuard]},
+    {path:"press-center",component:PressCenterComponent},
+    {path:'',component:HomeComponent,canActivate:[clinicGuard,expireGuard]},
     {path:'**',component:NotFoundComponent}
 ];
