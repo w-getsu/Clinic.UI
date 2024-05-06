@@ -74,13 +74,20 @@
                 >
               </button>
             </li>
-            @if(isChecked == false) {
+            @if(isChecked == true) {
             <li>
-              <button class="btn btn-danger" style="margin-left: 2px">
+              <button class="btn btn-danger" style="margin-left: 2px" (click)="Out()">
                 Out
               </button>
             </li>
             }
+            @else{
+              <li>
+                <button class="btn btn-danger" style="margin-left: 2px" (click)="In()">
+                  In
+                </button>
+              </li>
+              }
           </ul>
         </div>
       </ul>
