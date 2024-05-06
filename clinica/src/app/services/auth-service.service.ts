@@ -50,5 +50,13 @@ export class AuthServiceService {
     localStorage.removeItem(this.tokenKey);
   }
 
+  isAuthorized(){
+    var result = localStorage.getItem(this.tokenKey);
+    if(result == null || result == "" || result == undefined)
+    {
+      return false;
+    }
+    return true;
+  }
 
 }

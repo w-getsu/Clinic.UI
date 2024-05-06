@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './components/identity-component/login/login.component';
 import { RegisterComponent } from './components/identity-component/register/register.component';
 import { HomeComponent } from './components/pages/home/home.component';
-
+import { CreateComponentA } from './components/admin-panel/diploms/create/create.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { adminGuard,clinicGuard,expireGuard } from './guards/clinic.guard';
@@ -25,9 +25,11 @@ import { PressCenterComponent } from './components/pages/press-center/press-cent
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
-    {path: 'home',component:HomeComponent, canActivate:[clinicGuard,expireGuard]},
-    {path: 'doctor', component: DoctorComponent,canActivate:[clinicGuard,expireGuard]},
-    {path: 'dashboard',component: HomeDashComponent,canActivate:[adminGuard]},
+
+    {path: 'home',component:HomeComponent},
+    {path: 'doctor', component: DoctorComponent},
+    {path: 'program', component: ProgrammsComponent},
+    {path: 'dashboard',component: HomeDashComponent},
     {path: 'service', component:ServiceComponent},
     {path: 'services',component:ServicesComponent},
     {path:'pricing',component:PricingComponent},
@@ -42,7 +44,10 @@ export const routes: Routes = [
                 {path: 'update',component: UpdateComponent},
                 {path: 'create',component: CreateComponent}
             ]},
-            {path:'diplom',component:DiplomsComponent}
+            {path:'diplom',component:DiplomsComponent},
+            {path:'diplom',children:[
+                {path: 'create',component:CreateComponentA}
+            ]}
         ]},
     {path: 'specialists',component:SpecialistsComponent,canActivate:[clinicGuard,expireGuard]},
     {path:"press-center",component:PressCenterComponent},
