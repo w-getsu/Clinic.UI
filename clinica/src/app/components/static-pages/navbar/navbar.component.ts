@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { AuthServiceService } from '../../../services/auth-service.service';
-
+import { SelectItem } from 'primeng/api';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,DropdownModule,FormsModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -15,6 +17,8 @@ export class NavbarComponent implements OnInit{
 
   constructor(private router: Router,private service : AuthServiceService) {
   }
+
+    
   ngOnInit(): void {
     this.Checker()
   }
