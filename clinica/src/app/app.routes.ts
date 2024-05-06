@@ -20,12 +20,14 @@ import { CreateComponent } from './components/admin-panel/skills/create/create.c
 import { DiplomsComponent } from './components/admin-panel/diploms/diploms.component';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { ServiceComponent } from './components/pages/service/service.component';
+import { ProgrammsComponent } from './components/pages/programms/programms.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
     {path: 'register', component : RegisterComponent},
     {path: 'home',component:HomeComponent},
     {path: 'doctor', component: DoctorComponent},
+    {path: 'program', component: ProgrammsComponent},
     {path: 'dashboard',component: HomeDashComponent},
     {path: 'service', component:ServiceComponent},
     {path: 'services',component:ServicesComponent},
