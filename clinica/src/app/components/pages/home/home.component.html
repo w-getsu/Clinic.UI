@@ -145,15 +145,29 @@
                                         color: rgb(83, 82, 82);
                                         ">Подробнее о клинике</a></li>
                 <div class="raqam">
-                    <li><app-duration-time [time]="'7'" [mainDescription]="'международных организаций-партнеров'" />
-                        <app-duration-time [time]="'14'"
-                            [mainDescription]="'специалистов из 4 стран ведут прием в Москве'" />
+                    <li>
+                        <app-duration-time 
+                        [beforeTime]="''"
+                        [time]="'7'"
+                        [timeDescription]="''"
+                        [mainDescription]="''"/>
+                        <app-duration-time 
+                        [beforeTime]="''"
+                        [time]="'10'"
+                        [timeDescription]="''"
+                        [mainDescription]="''"/>    
                     </li>
                     <li >
-                        <app-duration-time [beforeTime]="''" [time]="'7'" [timeDescription]="''"
-                            [mainDescription]="'направлений антивозрастной медицины'" />
-                        <app-duration-time [beforeTime]="''" [time]="'12'" [timeDescription]="''"
-                            [mainDescription]="'лет работы в России'" />
+                        <app-duration-time 
+                        [beforeTime]="''"
+                        [time]="'7'"
+                        [timeDescription]="''"
+                        [mainDescription]="''"/>
+                        <app-duration-time 
+                        [beforeTime]="''"
+                        [time]="'12'"
+                        [timeDescription]="''"
+                        [mainDescription]="''"/>
                     </li>
                 </div>
             </div>
@@ -187,7 +201,7 @@
         </div>
         <ul class="list">
             <li class="home4-box" style="opacity: 30%;"><a href="#"><img src="../../../../assets/images/prew.svg" alt=""></a></li>
-            <li class="home4-box"><a href="#"><img src="../../../../assets/images/next.svg"alt=""></a></li>
+            <li class="home4-box"><a href=""><img src="../../../../assets/images/next.svg"alt=""></a></li>
         </ul>
         <div class="cards">
             @for (doctor of Doctors; track doctor.id) {
@@ -196,6 +210,10 @@
                 [startWork]="'Стаж работы с '+doctor.startWork+' год'" [description]="''" />
             }
         </div>
+    </section>
+
+    <section class="home5">
+
     </section>
 </main>
 
