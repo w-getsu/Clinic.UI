@@ -21,6 +21,7 @@ import { DiplomsComponent } from './components/admin-panel/diploms/diploms.compo
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import { ServiceComponent } from './components/pages/service/service.component';
 import { PressCenterComponent } from './components/pages/press-center/press-center.component';
+import { ProgrammsComponent } from './components/pages/programms/programms.component';
 
 export const routes: Routes = [
     {path : 'login', component : LoginComponent},
