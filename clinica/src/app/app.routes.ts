@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './components/identity-component/login/login.component';
 import { RegisterComponent } from './components/identity-component/register/register.component';
 import { HomeComponent } from './components/pages/home/home.component';
-
+import { CreateComponentA } from './components/admin-panel/diploms/create/create.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { adminGuard,clinicGuard,expireGuard } from './guards/clinic.guard';
@@ -41,7 +41,10 @@ export const routes: Routes = [
                 {path: 'update',component: UpdateComponent},
                 {path: 'create',component: CreateComponent}
             ]},
-            {path:'diplom',component:DiplomsComponent}
+            {path:'diplom',component:DiplomsComponent},
+            {path:'diplom',children:[
+                {path: 'create',component:CreateComponentA}
+            ]}
         ]},
     {path: 'specialists',component:SpecialistsComponent},
     {path:'',component:HomeComponent},

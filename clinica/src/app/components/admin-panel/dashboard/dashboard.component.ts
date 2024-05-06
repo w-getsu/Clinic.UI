@@ -22,7 +22,7 @@ export class DashboardComponent {
         { label: 'Specialists', icon: 'pi pi-home', routerLink: '/dashboard/spec' },
         { label: 'Feedbacks', icon: 'pi pi-home', routerLink: '/dashboard/feedbacks' },
         { label: 'News', icon: 'pi pi-home', routerLink: '/dashboard/news' },
-        { label: 'Diploms', icon: 'pi pi-home', routerLink: '/dashboard/diploms' },
+        { label: 'Diploms', icon: 'pi pi-home', routerLink: '/dashboard/diplom' },
         { label: 'Results', icon: 'pi pi-home', routerLink: '/dashboard/results' },
         { label: 'Educations', icon: 'pi pi-home', routerLink: '/dashboard/edu' },
         { label: 'users', icon: 'pi pi-home', routerLink: '/dashboard/users' },

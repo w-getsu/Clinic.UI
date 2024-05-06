@@ -19,11 +19,6 @@ export class DiplomService {
   getAll(data: getModel): Observable<Diplom[]> {
     return this.http.get<Diplom[]>(`${this.apiUrl}/GetAllDiplom?pageIndex=${data.pageIndex}&size=${data.size}`)
   }
-      
-      
-    
-  
-  
 
   getById(data:IndexerModel): Observable<Diplom> {
     return this.http.get<Diplom>(`${this.apiUrl}/GetDiplomById/?Id=${data.id}`);
