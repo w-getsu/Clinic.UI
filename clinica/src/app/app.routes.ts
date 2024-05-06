@@ -15,6 +15,7 @@ import { FeedbackComponent } from './components/pages/feedback/feedback.componen
 import { AboutComponent } from './components/pages/about/about.component';
 import { UpdateComponent } from './components/admin-panel/skills/update/update.component';
 import { HomeDashComponent } from './components/admin-panel/home-dash/home-dash.component';
+import { ProgrammaComponent } from './components/pages/programma/programma.component';
 
 import { CreateComponent } from './components/admin-panel/skills/create/create.component';
 import { DiplomsComponent } from './components/admin-panel/diploms/diploms.component';
@@ -28,6 +29,7 @@ export const routes: Routes = [
     {path: 'home',component:HomeComponent},
     {path: 'doctor', component: DoctorComponent},
     {path: 'program', component: ProgrammsComponent},
+    {path: 'programma', component: ProgrammaComponent},
     {path: 'dashboard',component: HomeDashComponent},
     {path: 'service', component:ServiceComponent},
     {path: 'services',component:ServicesComponent},
