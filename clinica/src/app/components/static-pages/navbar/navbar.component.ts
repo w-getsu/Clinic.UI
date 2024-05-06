@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { AuthServiceService } from '../../../services/auth-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,14 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(private router: Router,) {}
 
-  isRegisterPage(): boolean {
-    return this.router.url ==='/register';
+  isChecked = false;
+
+  constructor(private router: Router,private service : AuthServiceService) {
+    this.Checker()
+  }
+
+  Checker(){
+    this.isChecked = this.service.isAuthorized();
   }
 }
